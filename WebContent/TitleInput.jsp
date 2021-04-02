@@ -13,9 +13,10 @@
 			<legend>직책 정보</legend>
 			<ul>
 				<li><label for="tno">직책번호</label> <input type="number"
-					name="tno" size="20" id="tno" autofocus required></li>
+					name="tno" size="20" id="tno" value="${title.no }" autofocus required></li>
 				<li><label for="tname">직책명</label> <input type="text"
-					name="tname" size="20" id="tname"></li>
+					name="tname" size="20" id="tname" value = "${title.name }"></li>
+				
 				<li><input type="submit" value="추가"> <input
 					type="reset" value="취소"></li>
 			</ul>

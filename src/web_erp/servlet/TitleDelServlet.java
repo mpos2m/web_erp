@@ -12,13 +12,13 @@ import web_erp.dto.Title;
 import web_erp.service.TitleService;
 
 
-@WebServlet("/TitleInsertServelt")
-public class TitleInsertServelt extends HttpServlet {
+@WebServlet("/TitleDelServlet")
+public class TitleDelServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	private TitleService service;
 	
-	
-    public TitleInsertServelt() {
+
+    public TitleDelServlet() {
     	service=new TitleService();
     }
 
@@ -31,15 +31,12 @@ public class TitleInsertServelt extends HttpServlet {
 		String name = request.getParameter("tname");
 		
 		Title title = new Title(no,name);
-		System.out.println(title);
-		
-		service.addTitle(title);
+		service.delTitle(8);
 		response.sendRedirect("TitleListServlet");
-//		request.getRequestDispatcher("TitleListServlet").forward(request, response);
 	}
 
+
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
 		doGet(request, response);
 	}
 

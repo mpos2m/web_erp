@@ -26,4 +26,8 @@ public class TitleService {
 	public Title showTitle(Title title) {
 		return dao.selectTitleByNo(title);
 	}
+	
+	public void delTitle(int TitleNo) {
+		dao.deleteTitle(8);
+	}
 }
